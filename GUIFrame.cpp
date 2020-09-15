@@ -62,7 +62,7 @@ GUIFrame::GUIFrame( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	dekrypterKnap = new wxButton( this, wxID_ANY, wxT("Dekrypter"), wxDefaultPosition, wxDefaultSize, 0 );
 	bSizer2->Add( dekrypterKnap, 0, wxALL, 5 );
 
-	wxString keyChoiceChoices[] = { wxT("1"), wxT("2"), wxT("3"), wxT("4") };
+	wxString keyChoiceChoices[] = { wxT("0"), wxT("1"), wxT("2"), wxT("3"), wxT("4") };
 	int keyChoiceNChoices = sizeof( keyChoiceChoices ) / sizeof( wxString );
 	keyChoice = new wxChoice( this, wxID_ANY, wxDefaultPosition, wxDefaultSize, keyChoiceNChoices, keyChoiceChoices, 0 );
 	keyChoice->SetSelection( 0 );

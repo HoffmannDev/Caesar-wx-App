@@ -78,7 +78,7 @@ void wxKryptFrame::OnQuit(wxCommandEvent &event)
 void wxKryptFrame::OnAbout(wxCommandEvent &event)
 {
     wxString msg = wxbuildinfo(long_f);
-    wxMessageBox(msg, _("Welcome to..."));
+    wxMessageBox(msg, _("WVelkommen til..."));
 }
 
 void wxKryptFrame::OnKrypter(wxCommandEvent &event)
@@ -86,15 +86,16 @@ void wxKryptFrame::OnKrypter(wxCommandEvent &event)
     wxString txt = klarBoks->GetValue();
     string x = txt.ToStdString();
     char y;
-    char real_rot[rot + 1];
-    strcpy(real_rot, rot.c_str());
+    int real_rot = rot;
 
     for (int i = 0; i < x.size(); i++) {
         y = x[i];
         if (x[i] > 96 && x[i] < 123) {
             y = x[i] - 32;
         }
-        x[i] = ( ((y + atoi(real_rot)) > 90) ? (65) : (0)) + (y + atoi(real_rot)) % 91;
+        //x[i] = ( ((y + atoi(real_rot)) > 90) ? (65) : (0)) + (y + atoi(real_rot)) % 91;
+        x[i] = ( ((y + rot)) > 90) ? (65) : (0) + (y + rot) % 91;
+
     }
     cifferBoks->SetValue(x);
 }
@@ -103,11 +104,22 @@ void wxKryptFrame::OnDekrypter(wxCommandEvent &event)
 {
     wxString txt = cifferBoks->GetValue();
     string x = txt.ToStdString();
+    char y;
+    int real_rot = rot;
 
+    for (int i = 0; i < x.size(); i++) {
+        y = x[i];
+        if (x[i] > 96 && x[i] < 123) {
+            y = x[i] - 32;
+        }
+        x[i] = ( ((y - rot)) < 65) ? (65) : (0) + (y - rot) % 91;
+    }
     klarBoks->SetValue(x);
 }
 
 void wxKryptFrame::OnValg(wxCommandEvent &event)
 {
     rot = keyChoice->GetSelection();
+    //rot = 1;
+
 }

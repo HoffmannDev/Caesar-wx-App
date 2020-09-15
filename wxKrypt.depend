@@ -2956,7 +2956,7 @@
 1599553313 c:\wxwidgets-3.0.5\include\wx\cocoa\mdi.h
 	"wx/frame.h"
 
-1600071854 source:c:\users\laptop\desktop\c++\wxkrypt\guiframe.cpp
+1600166114 source:c:\users\laptop\desktop\c++\wxkrypt\guiframe.cpp
 	"wx/wxprec.h"
 	<wx/wx.h>
 	"GUIFrame.h"
@@ -3045,12 +3045,15 @@
 1599561146 c:\users\laptop\desktop\c++\wxkrypt\wxkryptapp.h
 	<wx/app.h>
 
-1600075194 c:\users\laptop\desktop\c++\wxkrypt\wxkryptmain.h
+1600166368 c:\users\laptop\desktop\c++\wxkrypt\wxkryptmain.h
 	"wxKryptApp.h"
 	<iostream>
 	"GUIFrame.h"
 
-1600071720 source:c:\users\laptop\desktop\c++\wxkrypt\wxkryptmain.cpp
+1600166780 source:c:\users\laptop\desktop\c++\wxkrypt\wxkryptmain.cpp
 	"wx_pch.h"
 	"wxKryptMain.h"
+	<iostream>
+	<stdlib.h>
+	<bits/stdc++.h>
 

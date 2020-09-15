@@ -32,7 +32,7 @@ class wxKryptFrame: public GUIFrame
         virtual void OnValg(wxCommandEvent& event);
 
         int rot;
-        char real_rot;
+        int real_rot;
 };
 
 #endif // WXKRYPTMAIN_H
