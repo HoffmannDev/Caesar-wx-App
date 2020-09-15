@@ -83,10 +83,10 @@ void wxKryptFrame::OnAbout(wxCommandEvent &event)
 
 void wxKryptFrame::OnKrypter(wxCommandEvent &event)
 {
-    wxString x = klarBoks->GetValue();
-    //string txt = txtklar.ToStdString();
+    wxString txt = klarBoks->GetValue();
+    string x = txt.ToStdString();
     char y;
-    char real_rot[rot.size() + 1];
+    char real_rot[rot + 1];
     strcpy(real_rot, rot.c_str());
 
     for (int i = 0; i < x.size(); i++) {
@@ -101,8 +101,8 @@ void wxKryptFrame::OnKrypter(wxCommandEvent &event)
 
 void wxKryptFrame::OnDekrypter(wxCommandEvent &event)
 {
-    wxString x = cifferBoks->GetValue();
-    //string txt = txtklar.ToStdString();
+    wxString txt = cifferBoks->GetValue();
+    string x = txt.ToStdString();
 
     klarBoks->SetValue(x);
 }
